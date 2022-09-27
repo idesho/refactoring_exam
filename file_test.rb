@@ -1,23 +1,3 @@
-while true
-    puts "実施したい処理を選択してください"
-    puts "1:評価ポイントとコメントを入力する"
-    puts "2:今までの結果を確認する"
-    puts "3:やめる"
-    num = gets.to_i
-  
-    case num
-    when 1
-    　evaluation_comment
-    when 2
-      result
-    when 3
-      puts "終了します"
-      break
-    else
-      puts "1から3で入力してください"
-    end
-end
-
 def evaluation_comment
     puts "1から5で評価を入力してください"
     point = gets.to_i
@@ -35,7 +15,7 @@ def evaluation_comment
         break
       end
   end
-  end
+end
   
   def result
       puts "これまでの結果"
@@ -45,3 +25,23 @@ def evaluation_comment
         end
       end
   end
+
+while true
+    puts "実施したい処理を選択してください"
+    puts "1:評価ポイントとコメントを入力する"
+    puts "2:今までの結果を確認する"
+    puts "3:やめる"
+    num = gets.to_i
+  
+    case num
+    when 1
+      evaluation_comment
+    when 2
+      result
+    when 3
+      puts "終了します"
+      break
+    else
+      puts "1から3で入力してください"
+    end
+end
